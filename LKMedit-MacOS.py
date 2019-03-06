@@ -2,6 +2,7 @@ import tkinter as tk
 import mido
 import ast
 import sys
+import random
 from tkinter import filedialog
 from tkinter import messagebox
 
@@ -120,6 +121,28 @@ def fill_color(color):
     colors[17] = color
     update_vpad_color()
 
+def random_color():
+    colorlist = [0,1,15,19,35,62,60,16]
+    colors[0] = colorlist[random.randint(0,7)]
+    colors[1] = colorlist[random.randint(0,7)]
+    colors[2] = colorlist[random.randint(0,7)]
+    colors[3] = colorlist[random.randint(0,7)]
+    colors[4] = colorlist[random.randint(0,7)]
+    colors[5] = colorlist[random.randint(0,7)]
+    colors[6] = colorlist[random.randint(0,7)]
+    colors[7] = colorlist[random.randint(0,7)]
+    colors[8] = colorlist[random.randint(0,7)]
+    colors[9] = colorlist[random.randint(0,7)]
+    colors[10] = colorlist[random.randint(0,7)]
+    colors[11] = colorlist[random.randint(0,7)]
+    colors[12] = colorlist[random.randint(0,7)]
+    colors[13] = colorlist[random.randint(0,7)]
+    colors[14] = colorlist[random.randint(0,7)]
+    colors[15] = colorlist[random.randint(0,7)]
+    colors[16] = colorlist[random.randint(0,7)]
+    colors[17] = colorlist[random.randint(0,7)]
+    update_vpad_color()
+    
 def exit_prog(bp=1):
     try:
         for led in leds:
@@ -514,6 +537,7 @@ editmenu = tk.Menu(menu)
 presetmenu = tk.Menu(editmenu)
 menu.add_cascade(label="Edit", menu=editmenu)
 editmenu.add_cascade(label="Presets", menu=presetmenu)
+editmenu.add_command(label="Randomize", command=random_color)
 editmenu.add_separator()
 editmenu.add_command(label="Reset                          Backspace", command=reset_settings)
 editmenu.add_command(label="Apply Changes                  Enter", command=apply_settings)

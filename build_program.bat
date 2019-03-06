@@ -7,7 +7,7 @@ cls
 color 04
 echo Debug Messages:
 color 08
-python setup.py bdist_msi
+"C:\Program Files (x86)\Python37-32\python.exe" setup.py bdist_msi
 cls
 color 02
 echo Complete.
