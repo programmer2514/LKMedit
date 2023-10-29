@@ -1,10 +1,6 @@
 # LKMedit
-An easy to use python program for interacting with a Launchkey Mini Midi Keyboard
+A utility for interacting with a Launchkey Mini MK2 MIDI Keyboard's pad lighting.
 
-This program is completely cross-platform
-
-On Windows 10/8/7, Simply download the exe
-
-To use this program on Linux/MacOS/earlier versions of Windows, simply install mido, python-rtmidi, tkinter, ast, and sys with pip
-
-Then run the program with python
+This program is completely cross-platform:
+* On Windows 10/8/7, Simply download the .exe from Releases
+* On Linux, MacOS, and earlier versions of Windows, install `mido`, `python-rtmidi`, `tkinter`, `ast`, and `sys` with pip, then run the program with Python 3
